@@ -11,6 +11,12 @@ The goal is to see what is the least amount of code changes to solve this "puzzl
 5. In `client/index.js` use the `MerkleTree` class and it's method `.getProof` to get the proof for a name.
 5. Send the proof to the server to receive the `gift` message (reward).
 
+I went a little further and made some followup changes breaking my own rules to use the MER approach:
+
+1. Added a readline interface to the client to read line input from the console, prompting the user for a name to look up.
+2. Added a case-insensitive search for the name so it's easier for the user to look up names.
+3. Fixed a bug on the server to not crash on empty input
+
 ## Setup
 
 To get started with the repository, clone it and then run `npm install` in the top-level directory to install the dependencies.

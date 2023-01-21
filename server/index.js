@@ -14,6 +14,11 @@ app.post('/gift', (req, res) => {
   // grab the parameters from the front-end here
   const body = req.body;
 
+  if (body.name == null ||  body.proof == null) {
+    res.send("Who do you think you are?")
+    return
+  }
+
   // TODO: prove that a name is in the list 
   const isInTheList = verifyProof(body.proof, body.name, MERKLE_ROOT);
   if(isInTheList) {
