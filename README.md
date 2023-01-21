@@ -1,5 +1,18 @@
 # Gift List
 
+## Solution
+
+I solved this project using the MER approach (minimum-effort-required). 
+The goal is to see what is the least amount of code changes to solve this "puzzle".
+
+1. Get the merkle root for the `niceList.json` by adding a `console.log(root)` to `example.js` and run it using `node example.js`.
+2. Paste the root hash in the `server/index.js` file for the MERKLE_ROOT constant.
+3. Use the `verifyProof` function in `server/index.js` using the submitted proof and the MERKLE_ROOT
+5. In `client/index.js` use the `MerkleTree` class and it's method `.getProof` to get the proof for a name.
+5. Send the proof to the server to receive the `gift` message (reward).
+
+## Setup
+
 To get started with the repository, clone it and then run `npm install` in the top-level directory to install the dependencies.
 
 There are three folders in this repository:
